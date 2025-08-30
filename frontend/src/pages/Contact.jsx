@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { ApiContext } from "../App"; // Import backend URL from App.js
 
 export default function Contact() {
-  const API_URL = useContext(ApiContext); // Backend URL
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +25,10 @@ export default function Contact() {
     setError("");
 
     try {
-      const response = await axios.post(`${API_URL}/api/newContact`, formData);
+      const response = await axios.post(
+        "https://vardaan-d6l4.onrender.com/api/newContact",
+        formData
+      );
 
       if (response.data) {
         setSuccess("✅ Your message has been sent successfully!");
@@ -49,16 +50,13 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      {/* Hero Section, Address Section, Map Section remain the same */}
-      {/* ... your existing HTML content ... */}
+    <div className="container py-5">
+      <h2 className="text-center fw-bold mb-4 text-warning">Contact Us</h2>
 
-      {/* Contact Form */}
+      {success && <div className="alert alert-success">{success}</div>}
+      {error && <div className="alert alert-danger">{error}</div>}
+
       <form onSubmit={handleSubmit}>
-        {success && <div className="alert alert-success">{success}</div>}
-        {error && <div className="alert alert-danger">{error}</div>}
-
-        {/* Inputs remain the same */}
         <div className="row mb-3">
           <div className="col">
             <input
@@ -114,8 +112,9 @@ export default function Contact() {
             name="purpose"
             value={formData.purpose}
             onChange={handleChange}
+            required
           >
-            <option value=""> Select Purpose </option>
+            <option value="">Select Purpose</option>
             <option value="Build Road">Build Road</option>
             <option value="Build Home">Build Home</option>
             <option value="Build Bridges">Build Bridges</option>
@@ -135,7 +134,7 @@ export default function Contact() {
           ></textarea>
         </div>
 
-        <button type="submit" className="btn btn-dark" disabled={loading}>
+        <button type="submit" className="btn btn-warning w-100 fw-bold" disabled={loading}>
           {loading ? "Sending..." : "SEND"}
         </button>
       </form>
