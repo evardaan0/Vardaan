@@ -6,7 +6,7 @@ export default function ReviewList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/allReviews")
+      .get(`${process.env.REACT_APP_API_URL}/api/allReviews`)
       .then((res) => setReviews(res.data))
       .catch((err) => console.error(err));
   }, []);
