@@ -1,3 +1,4 @@
+// 📂 src/components/ReviewForm.jsx
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -16,7 +17,7 @@ export default function ReviewForm({ onReviewAdded }) {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/newReview`,
+        "http://localhost:5000/api/newReview",
         formData
       );
       onReviewAdded(res.data);
@@ -29,6 +30,7 @@ export default function ReviewForm({ onReviewAdded }) {
 
   return (
     <form onSubmit={handleSubmit} className="review-form">
+      {/* Name */}
       <div className="mb-3">
         <label className="form-label fw-bold">Your Name</label>
         <input
@@ -42,6 +44,7 @@ export default function ReviewForm({ onReviewAdded }) {
         />
       </div>
 
+      {/* Rating */}
       <div className="mb-3">
         <label className="form-label fw-bold">Rating</label>
         <select
@@ -58,6 +61,7 @@ export default function ReviewForm({ onReviewAdded }) {
         </select>
       </div>
 
+      {/* Comment */}
       <div className="mb-3">
         <label className="form-label fw-bold">Your Review</label>
         <textarea
@@ -71,10 +75,12 @@ export default function ReviewForm({ onReviewAdded }) {
         ></textarea>
       </div>
 
+      {/* Submit Button */}
       <button type="submit" className="btn btn-warning w-100 fw-bold">
         Submit Review
       </button>
 
+      {/* Custom CSS */}
       <style>{`
         .review-form {
           background: #fff;
