@@ -6,23 +6,27 @@ export default function ReviewList() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/allReviews`)
+      .get("http://localhost:5000/api/allReviews")
       .then((res) => setReviews(res.data))
       .catch((err) => console.error(err));
   }, []);
 
-  const renderStars = (rating) => "⭐".repeat(rating) + "☆".repeat(5 - rating);
+  // ⭐ Utility to render stars
+  const renderStars = (rating) => {
+    return "⭐".repeat(rating) + "☆".repeat(5 - rating);
+  };
 
-  const formatDate = (dateString) =>
-    dateString
-      ? new Date(dateString).toLocaleString("en-IN", {
-          day: "2-digit",
-          month: "short",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        })
-      : "Date not available";
+  // 📅 Utility to format date & time
+  const formatDate = (dateString) => {
+    if (!dateString) return "Date not available";
+    return new Date(dateString).toLocaleString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
 
   return (
     <div className="review-list">
@@ -37,7 +41,9 @@ export default function ReviewList() {
           <div key={review._id} className="review-card">
             <div className="d-flex justify-content-between align-items-center">
               <h5 className="fw-bold text-dark">{review.name}</h5>
-              <small className="text-muted">{formatDate(review.createdAt)}</small>
+              <small className="text-muted">
+                {formatDate(review.createdAt)}
+              </small>
             </div>
 
             <p className="rating">{renderStars(review.rating)}</p>
@@ -46,6 +52,7 @@ export default function ReviewList() {
         ))
       )}
 
+      {/* Custom CSS */}
       <style>{`
         .review-card {
           background: #fff;
