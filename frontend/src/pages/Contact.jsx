@@ -26,7 +26,7 @@ export default function Contact() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/newContact",
+        "https://vardaan-d6l4.onrender.com/api/newContact",
         formData
       );
 
