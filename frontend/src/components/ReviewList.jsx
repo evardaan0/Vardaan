@@ -6,7 +6,7 @@ export default function ReviewList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/allReviews")
+      .get("https://vardaan-d6l4.onrender.com/api/allReviews")
       .then((res) => setReviews(res.data))
       .catch((err) => console.error(err));
   }, []);
