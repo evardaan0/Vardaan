@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
   data.append("resumeFile", formData.resumeFile);
 
   try {
-    const res = await axios.post("http://localhost:5000/api/apply", data, {
+    const res = await axios.post("https://vardaan-d6l4.onrender.com/api/apply", data, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     alert("✅ Application submitted successfully!");
