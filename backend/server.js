@@ -17,7 +17,7 @@ const url = process.env.MONGO_URL;
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: ["https://vardaanenterprise.in"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
