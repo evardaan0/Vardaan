@@ -78,7 +78,7 @@ export default function Home() {
       justify-content: center;
       position: relative;
       overflow: hidden;
-      z-index: 1000;
+      z-index:10;
     }
     .video-bg {
       position: absolute;
