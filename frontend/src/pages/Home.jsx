@@ -346,7 +346,6 @@ export default function Home() {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-radius: 12px;
       overflow: hidden;
-     
     }
     .project-card:hover {
       transform: scale(1.05);
