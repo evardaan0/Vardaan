@@ -26,7 +26,7 @@ export default function Contact() {
 
     try {
       const response = await axios.post(
-        "https://vardaan-d6l4.onrender.com/api/newContact",
+        "http://localhost:5000/api/newContact",
         formData
       );
 
@@ -55,10 +55,10 @@ export default function Contact() {
       <section
         className="hero-section text-white d-flex align-items-center position-relative"
         style={{
-          backgroundImage: "url('/assets/img/contactbgg.jpg')",
+          backgroundImage: "url('/assets/img/contactbg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "380px",
+          height: "310px",
         }}
       >
         <div
@@ -112,7 +112,7 @@ export default function Contact() {
               <div className="card shadow border-0 h-100">
                 <div className="card-body">
                   <h5 className="fw-bold text-warning mb-3">
-                    <i className="bi bi-geo-alt me-2"></i> CONTACT INFO
+                    <i className="bi bi-geo-alt me-2"></i> REGISTERED OFFICE
                   </h5>
                   <p className="mb-2 text-dark">
                     <i className="bi bi-telephone text-warning me-2"></i>
