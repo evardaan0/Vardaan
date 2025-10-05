@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
   data.append("resumeFile", formData.resumeFile);
 
   try {
-    const res = await axios.post("https://vardaan-d6l4.onrender.com/api/apply", data, {
+    const res = await axios.post("http://localhost:5000/api/apply", data, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     alert("✅ Application submitted successfully!");
@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
 
       {/* 🔹 About Company */}
       <section className="container py-5 text-center">
-        <h2 className="fw-bold text-warning mb-4">Careers at Vardaan Enterprises</h2>
+        <h2 className="fw-bold text-warning mb-4"> Careers at Vardaan Enterprises</h2>
         <p className="lead px-lg-5" style={{ lineHeight: "1.8" }}>
           At <span className="fw-bold text-dark">Vardaan Enterprises</span>, we are redefining the future of
           construction in India. Our projects span across{" "}
@@ -247,7 +247,7 @@ const handleSubmit = async (e) => {
 
               <div className="d-flex justify-content-between mt-4">
                 <button type="submit" className="btn btn-warning fw-bold px-4">
-                  🚀 Submit Application
+                   Submit Application
                 </button>
                 <button type="button" className="btn btn-secondary px-4" onClick={() => setSelectedJob(null)}>
                   Cancel
