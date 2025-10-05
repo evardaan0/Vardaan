@@ -133,19 +133,16 @@ export default function Project() {
       <section
         className="hero-section text-white d-flex align-items-center"
         style={{
-          backgroundImage: "url('/assets/img/projectbg.jpg')",
+          backgroundImage: "url('/assets/img/bgproject.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "350px",
         }}
       >
-      <div className="container text-center">
-  <h1 className="fw-bold" style={{ color: "#FFC107" }}>
-    PROJECTS
-  </h1>
-  <p>Home » Projects</p>
-</div>
-
+        <div className="container text-center">
+          <h1 className="fw-bold">PROJECTS</h1>
+          <p>Home » Projects</p>
+        </div>
       </section>
 
       {/* 🔹 Portfolio Section */}
