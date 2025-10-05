@@ -78,6 +78,7 @@ export default function Home() {
       justify-content: center;
       position: relative;
       overflow: hidden;
+      z-index:10;
     }
     .video-bg {
       position: absolute;
@@ -346,6 +347,7 @@ export default function Home() {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-radius: 12px;
       overflow: hidden;
+      z-index:1;
     }
     .project-card:hover {
       transform: scale(1.05);
