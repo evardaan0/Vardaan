@@ -55,10 +55,10 @@ export default function Contact() {
       <section
         className="hero-section text-white d-flex align-items-center position-relative"
         style={{
-          backgroundImage: "url('/assets/img/contactbg.jpg')",
+          backgroundImage: "url('/assets/img/contactbgg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "310px",
+          height: "380px",
         }}
       >
         <div
@@ -112,7 +112,7 @@ export default function Contact() {
               <div className="card shadow border-0 h-100">
                 <div className="card-body">
                   <h5 className="fw-bold text-warning mb-3">
-                    <i className="bi bi-geo-alt me-2"></i> REGISTERED OFFICE
+                    <i className="bi bi-geo-alt me-2"></i> CONTACT INFO
                   </h5>
                   <p className="mb-2 text-dark">
                     <i className="bi bi-telephone text-warning me-2"></i>
