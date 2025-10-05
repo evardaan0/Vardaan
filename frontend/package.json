@@ -13,7 +13,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1"
-    "framer-motion": "^12.23.22",
+    "framer-motion": "^12.23.22"
   },
   "scripts": {
     "start": "react-scripts start",
