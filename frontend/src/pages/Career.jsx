@@ -101,14 +101,14 @@ const handleSubmit = async (e) => {
 
       {/* 🔹 About Company */}
       <section className="container py-5 text-center">
-        <h2 className="fw-bold text-warning mb-4">🚀 Careers at Vardaan Enterprises</h2>
+        <h2 className="fw-bold text-warning mb-4">Careers at Vardaan Enterprises</h2>
         <p className="lead px-lg-5" style={{ lineHeight: "1.8" }}>
           At <span className="fw-bold text-dark">Vardaan Enterprises</span>, we are redefining the future of
           construction in India. Our projects span across{" "}
           <strong>roads, bridges, commercial hubs, and housing</strong>.
           <br />
           <br />
-          🌟 Here, you won’t just build structures — you’ll build a career filled with{" "}
+           Here, you won’t just build structures — you’ll build a career filled with{" "}
           <span className="text-primary fw-bold">learning, growth, innovation, and recognition</span>.
           <br />
           We value <em>ideas, dedication, and teamwork</em>, and we believe in creating opportunities where every
